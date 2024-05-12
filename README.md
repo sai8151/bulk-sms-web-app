@@ -1,6 +1,6 @@
-# CSV Processor Web Application
+# CSV Processor Web Application export data to external api
 
-This is a simple web application built with Java Servlets that allows users to upload CSV files containing phone numbers and text messages, and then sends the data to a remote API endpoint for processing.
+This is a web application built with Java Servlets that allows users to upload CSV files containing phone numbers and text messages, and then sends the data to a remote API endpoint for processing.
 
 ## Features
 
