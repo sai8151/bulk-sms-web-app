@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Page</title>
+    	<link rel="stylesheet" href="css/styles.css">
+<script>
+
+function validateRegisterForm() {
+    var username = document.getElementById('register_username').value;
+    var email = document.getElementById('register_email').value;
+    var password = document.getElementById('register_password').value;
+
+    if (username.trim() === '' || email.trim() === '' || password.trim() === '') {
+        alert('Please fill in all fields.');
+        return false;
+    }
+
+    if (username.indexOf(' ') >= 0 || email.indexOf(' ') >= 0 || password.indexOf(' ') >= 0) {
+        alert('Spaces are not allowed in any field.');
+        return false;
+    }
+
+    return true;
+}
+</script>
+</head>
+<body>
+
+
+
+
+<div id="feedback-form">
+  <h2 class="header">Register</h2>
+
+    <form onsubmit="return validateRegisterForm()" action="register" method="post" >
+        <label for="user_id">User ID:</label><br>
+        <input type="text" id="user_id" name="user_id" pattern="^\S+$" required><br>
+        <label for="password">Password:</label><br>
+        <input type="text" id="password" name="password" pattern="^\S+$" required><br>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" pattern="^\S+$" required><br>
+        <label for="phno">Phone Number:</label><br>
+        <input type="text" id="phno" name="phno" pattern="^\S+$" required><br><br>
+        <input type="submit" value="Register">
+    </form>
+    <a href="login.html"><button type="submit">login</button></a>
+</div>
+</body>
+</html>

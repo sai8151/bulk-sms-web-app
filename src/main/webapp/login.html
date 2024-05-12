@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    	<link rel="stylesheet" href="css/styles.css">
+<script>
+function validateLoginForm() {
+    var username = document.getElementById('login_username').value;
+    var password = document.getElementById('login_password').value;
+
+    if (username.trim() === '' || password.trim() === '') {
+        alert('Please enter both username and password.');
+        return false;
+    }
+
+    return true;
+}
+</script>
+</head>
+<body>
+   
+<div id="feedback-form">
+  <h2 class="header">Login</h2>
+  <form  onsubmit="return validateLoginForm()" action="login" method="post" >
+  		
+        <label for="user_id">User ID:</label><br>
+        <input type="text" id="user_id" name="user_id" pattern="^\S+$" required><br>
+        <label for="password">Password:</label><br>
+        <input type="text" id="password" name="password" pattern="^\S+$" required><br><br>
+        <input type="submit" value="Login">
+    </form>
+        <a href="register.html"><button type="submit">Register</button></a>
+    
+</div>
+</body>
+</html>
